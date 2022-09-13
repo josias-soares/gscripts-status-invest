@@ -21,10 +21,10 @@ setTimeout(function() {
 }, 1000);
 
 
-function sortDY() {
+function sortDYFII() {
     console.log("sortDY");
 
-    deleteColumns();
+    deleteColumnsFIIs();
 
     setTimeout(function() {
         insertLastValueDY()
@@ -59,8 +59,8 @@ async function setValueDY(ativo, tbl, i, currentPrice) {
         color = "green-text"
     }
 
-    createCell(tbl.rows[i].insertCell(tbl.rows[i].cells.length), dyPercent, "%", color);
-    createCell(tbl.rows[i].insertCell(tbl.rows[i].cells.length), lastDYvalue, "R$", color);
+    createCellFII(tbl.rows[i].insertCell(tbl.rows[i].cells.length), dyPercent, "%", color);
+    createCellFII(tbl.rows[i].insertCell(tbl.rows[i].cells.length), lastDYvalue, "R$", color);
 }
 
 // append column to the HTML table
@@ -71,7 +71,7 @@ function insertLastValueDY() {
         var x
         for (x = 1; x < 12; x++) {
             // add listener to sort column
-            document.querySelector(`#assets-result > div.card.p-0.groups-container > ul > li:nth-child(2) > div > div > div:nth-child(1) > div.overflow-hidden.normal.w-100 > div > table > thead > tr > th:nth-child(${x})`).addEventListener('click', sortDY);
+            document.querySelector(`#assets-result > div.card.p-0.groups-container > ul > li:nth-child(2) > div > div > div:nth-child(1) > div.overflow-hidden.normal.w-100 > div > table > thead > tr > th:nth-child(${x})`).addEventListener('click', sortDYFII);
         }
     }, 200);
 
@@ -94,7 +94,7 @@ function insertLastValueDY() {
 }
 
 // create DIV element and append to the table cell
-function createCell(cell, text, symbol, color) {
+function createCellFII(cell, text, symbol, color) {
 
     var textFormated = (text.toFixed(2)).replace(".", ",")
     var dataKey = ""
@@ -153,7 +153,7 @@ function createTHeaderLastPercentDy(cell) {
 }
 
 // delete table columns with index greater then 0
-function deleteColumns() {
+function deleteColumnsFIIs() {
     var tbl = document.querySelector("#assets-result > div.card.p-0.groups-container > ul > li:nth-child(2) > div").getElementsByTagName('table')[1], // table reference
         lastCol = tbl.rows[0].cells.length - 1, // set the last column index
         i;
