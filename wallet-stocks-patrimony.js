@@ -34,8 +34,8 @@ function lastTwoToUpper(string) {
     return newString;
 }
 
-function sortDY() {
-    console.log("sortDY");
+function sortCollumStocks() {
+    console.log("sortCollumStocks");
 
     deleteColumns();
 
@@ -120,7 +120,7 @@ function insertValuation() {
         var x
         for (x = 1; x < 12; x++) {
             // add listener to sort column
-            document.querySelector(`#assets-result > div.card.p-0.groups-container > ul > li:nth-child(1) > div > div > div:nth-child(1) > div.overflow-hidden.normal.w-100 > div > table > thead > tr > th:nth-child(${x})`).addEventListener('click', sortDY);
+            document.querySelector(`#assets-result > div.card.p-0.groups-container > ul > li:nth-child(1) > div > div > div:nth-child(1) > div.overflow-hidden.normal.w-100 > div > table > thead > tr > th:nth-child(${x})`).addEventListener('click', sortCollumStocks);
         }
     }, 200);
 
