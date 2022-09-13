@@ -1,7 +1,7 @@
 /* -------- ADD THIS CODE IN THE HEADER OF GREASEMONKEY ---------
 
 // ==UserScript==
-// @name         Carteira -> Ações
+// @name         Carteira -> Ações/FIIs
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
@@ -11,6 +11,7 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=statusinvest.com.br
 // @grant        none
 // @require      https://raw.githubusercontent.com/josias-soares/gscripts-status-invest/main/wallet-stocks-patrimony.js
+// @require      https://raw.githubusercontent.com/josias-soares/gscripts-status-invest/main/wallet-fiis-patrimony.js
 // ==/UserScript==
 
 */
