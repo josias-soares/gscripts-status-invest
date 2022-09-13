@@ -22,7 +22,7 @@ setTimeout(function() {
 
 
 function sortDYFII() {
-    console.log("sortDY");
+    console.log("sortDYFII");
 
     deleteColumnsFIIs();
 
